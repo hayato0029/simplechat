@@ -11,7 +11,7 @@ API_BASE = "https://0e89-34-16-242-246.ngrok-free.app"
 GENERATE_PATH = "/generate"
 
 
-def lambda_handler(event, context):
+def lambda_handler(event):
     try:
         print("Received event:", json.dumps(event))
 
