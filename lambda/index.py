@@ -26,7 +26,11 @@ def lambda_handler(event):
 
         # FastAPI /generate へ POST リクエスト用ペイロードを準備
         request_payload = {
-            "prompt": prompt
+            "prompt": prompt,
+            "max_new_tokens": 512,
+            "do_sample": True,
+            "temperature": 0.7,
+            "top_p": 0.9
         }
         data = json.dumps(request_payload).encode('utf-8')
         req = urllib.request.Request(
